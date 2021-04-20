@@ -1,18 +1,13 @@
-Linux kernel
-============
+CMPE283-Assignment1
+Team Member: Chen Zhang 014536496
+Implement steps:
+1. Install Oracle VM VirtualBox
+2. Download Ubuntu in the virtual box
+3. Install git: sudo apt-get install git
+4. Fork from https://github.com/torvalds/linux to my repo: https://github.com/miaoxiaogu/linux
+5. Downlown the linux code from my repo: -git clone https://github.com/miaoxiaogu/linux
+6. Build Environment according to https://wiki.ubuntu.com/Kernel/BuildYourOwnKernel
+sudo apt-get build-dep linux linux-image-$(uname -r)
+sudo apt-get install libncurses-dev gawk flex bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf
 
-There are several guides for kernel developers and users. These guides can
-be rendered in a number of formats, like HTML and PDF. Please read
-Documentation/admin-guide/README.rst first.
 
-In order to build the documentation, use ``make htmldocs`` or
-``make pdfdocs``.  The formatted documentation can also be read online at:
-
-    https://www.kernel.org/doc/html/latest/
-
-There are various text files in the Documentation/ subdirectory,
-several of them using the Restructured Text markup notation.
-
-Please read the Documentation/process/changes.rst file, as it contains the
-requirements for building and running the kernel, and information about
-the problems which may result by upgrading your kernel.
