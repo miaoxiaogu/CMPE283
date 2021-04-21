@@ -1,2 +1,2 @@
-/home/chen/Downloads/cmpe283-1.o
+/home/chen/Assignment1/cmpe283-1.o
 
