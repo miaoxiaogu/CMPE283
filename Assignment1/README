@@ -2,23 +2,31 @@ __CMPE283-Assignment1__
 ##Team Member: Chen Zhang 014536496
 ##Output log is show as: https://github.com/miaoxiaogu/CMPE283/blob/main/Assignment1/output.txt
 ##Implement steps:
-1. Install Oracle VM VirtualBox and Download Ubuntu in the virtual box
+
+1. Install Oracle VM VirtualBox and Download Ubuntu into the virtual box sharing files.
+
 2. Downlown the linux code
 - Install git: sudo apt-get install git
 - Fork from https://github.com/torvalds/linux to my repo: https://github.com/miaoxiaogu/linux
-- Downlown the linux code from my repo: git clone https://github.com/miaoxiaogu/linux
-3. Build Environment according to https://wiki.ubuntu.com/Kernel/BuildYourOwnKernel
+- Downlown the linux code from my repo in the VM's terminal: git clone https://github.com/miaoxiaogu/linux
+3. Build Environment according to: https://wiki.ubuntu.com/Kernel/BuildYourOwnKernel
 sudo apt-get build-dep linux linux-image-$(uname -r)
 sudo apt-get install libncurses-dev gawk flex bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf
-4. New a folder Assignment1 and copy Makefile and cmpe283-1.c into the folder.
-5. Creatint new module: make
-6. Insert the module: sudo insmod ./cmpe283-1.ko
+
+4. New a folder Assignment1 in the home folder of the VM and copy Makefile and cmpe283-1.c into the folder.
+
+5. Creating new module by type in the terminal: make
+
+6. Insert the module(without sudu it won't work): sudo insmod ./cmpe283-1.ko
+
 7. Output the log: dmesg
-8. Find the output is 0x0, research and find we need to enable hardware virtualazation. We need to enable Nested VT-x/AMD-V according:https://www.youtube.com/watch?v=yp9CFQhEaUg After firgue it out. It works.
-9. Modify the cmpe283-1.c to add the other 4 accoding to https://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-software-developer-vol-3c-part-3-manual.pdf and remove the module and restart to output the new log.
-sudo rmmod ./cmpe283-1.ko
-sudo insmod ./cmpe283-1.ko
-dmesg
+
+8. Find the output control MRS is 0x0, research and find I need to enable hardware virtualazation. I enable Nested VT-x/AMD-V according to:https://www.youtube.com/watch?v=yp9CFQhEaUg.After firgue it out. It works.
+
+9. Modify the cmpe283-1.c to add the other 4 Controls MSR accoding to https://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-software-developer-vol-3c-part-3-manual.pdf and remove the module and restart to output the new log.
+- sudo rmmod ./cmpe283-1.ko
+- sudo insmod ./cmpe283-1.ko
+- dmesg
 
 
 
