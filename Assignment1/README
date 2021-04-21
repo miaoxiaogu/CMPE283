@@ -9,6 +9,7 @@ __CMPE283-Assignment1__
 - Install git: sudo apt-get install git
 - Fork from https://github.com/torvalds/linux to my repo: https://github.com/miaoxiaogu/linux
 - Downlown the linux code from my repo in the VM's terminal: git clone https://github.com/miaoxiaogu/linux
+
 3. Build Environment according to: https://wiki.ubuntu.com/Kernel/BuildYourOwnKernel
 sudo apt-get build-dep linux linux-image-$(uname -r)
 sudo apt-get install libncurses-dev gawk flex bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf
