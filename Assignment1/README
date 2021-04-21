@@ -1,6 +1,7 @@
-CMPE283-Assignment1
-Team Member: Chen Zhang 014536496
-Implement steps:
+##CMPE283-Assignment1
+##Team Member: Chen Zhang 014536496
+##Output log is show as: https://github.com/miaoxiaogu/CMPE283/blob/main/Assignment1/output.txt
+##Implement steps:
 1. Install Oracle VM VirtualBox and Download Ubuntu in the virtual box
 2. Downlown the linux code
 - Install git: sudo apt-get install git
@@ -13,6 +14,7 @@ sudo apt-get install libncurses-dev gawk flex bison openssl libssl-dev dkms libe
 5. Creatint new module: make
 6. Insert the module: sudo insmod ./cmpe283-1.ko
 7. Output the log: dmesg
+8. Find the output is 0x0, research and find we need to enable hardware virtualazation. We need to enable Nested VT-x/AMD-V according:https://www.youtube.com/watch?v=yp9CFQhEaUg After firgue it out. It works.
 8. Modify the cmpe283-1.c accoding to https://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-software-developer-vol-3c-part-3-manual.pdf and remove the module and restart to output the new log.
 sudo rmmod ./cmpe283-1.ko
 sudo insmod ./cmpe283-1.ko
